@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/stylePI.css">
+<title>Aldo Leon Marquez</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+       
+        <!-- MiniPreview stuff here -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="js/jquery.minipreviews.js"></script>
+		
+        <script>
+            $(function() {
+                $('#p1 a').miniPreview({ prefetch: 'pageload' });// load before
+                $('#p2 a').miniPreview({ prefetch: 'parenthover' });//loaded when hover over 
+                $('#p3 a').miniPreview({ prefetch: 'none' });//loaded only when hovering
+            });
+        </script>
+
+</head>
+  <body>
+    <header>
+	
+	  <nav> 
+        <ul>
+	      <li> <a class="active" href="index.html">Home</a> </li>
+	      <li> <a href="AboutMe.html"> About Me</a> <li>
+	      <li> <a href="PI.html">Professional</a> </li>
+	      <li> <a href="Portfolio.html">Portfolio</a></li>	      
+	      <li> <a href="Service.html">Service</a> </li>
+	    </ul>
+	  </nav> 
+	  
+	</header>
+	<div class="cover"></div>
+	<div class="PageIntro">
+	  <h1 id="Title">Professional Information</h1>
+	  <h2 id="Subtitle"></h2>
+	</div>
+	
+	<main>
+	 
+	 <div class="mainText">
+	   <p  >
+	   I'm Currently a Junior Computer Engineering Major at Texas A&M, 
+	   My experience in the Computer Science field is mostly with C++, but  I also have experience  
+	   with 3D graphics(<a href="https://www.opengl.org/" target="_blank" >OpenGl</a>) 
+	   and Python. I'm currently Learning C, Go, HTML, and CSS.<br>	   
+	   On the Hardware side of things, I have experience with Verilog, 
+	   Analog Circuits, Digital Design and Computer Architecture.<br>
+	
+	   </p>
+	   <p id ="p2">
+	   So far, my only contribution to Computer Science outside of my class projects is a <a href="https://en.wikipedia.org/wiki/Lidar" target="_blank" > LiDAR</a> 
+	   camera view that I Coded for the AggiE_Challenge:<a href="https://spacecraft-vr.com/" target="_blank" >Spacecraft</a>. This code was developed using the OpenGl Library and GLS Programing, 
+	   The program has the required functions to load 3D models, move the position of the camera and adjust the 
+	   desired range of the simulated LiDAR measurement.
+	   <br>
+	   <br>
+	   Moving forward I want to keep on learning about Graphics and start learning about Game Design/Development 
+	   as well as User Interfaces and Computer Human Interactions. My end goal is to have a at least some experience 
+	   in most Areas of Computer Science. I'm also currently searching for a summer internship to gain first-hand 
+	   experience from software engineers. Below is my resume with more detailed information about my experience, 
+	   and a download link in case is not being displayed correctly 
+	   
+	   
+	   </p>	 
+	 </div>
+	 <div class="resume">
+	 <p align="center">
+		  <embed src="Images/Resume .pdf" width="50%" height="1050px" frameborder="0" >
+	 </p>
+	</div>
+	<div ><p align="center"> <br><a href="Resume .pdf" target="_blank">Download Resume</a></p></div>
+	</main>
+	
+	<footer>
+	  <div  class="wraper">
+        
+	  </div>
+	</footer>
+	
+  </body>
+</html>

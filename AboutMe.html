@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styleAB.css">
+<title>Aldo Leon Marquez</title>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="js/jquery.minipreviews.js"></script>
+		
+        <script>
+            $(function() {
+                $('#p1 a').miniPreview({ prefetch: 'pageload' });// load before
+                $('#p2 a').miniPreview({ prefetch: 'parenthover' });//loaded when hover over 
+                $('#p3 a').miniPreview({ prefetch: 'none' });//loaded only when hovering
+            });
+        </script>
+</head>
+  <body>
+    <header>
+	
+	  <nav> 
+        <ul>
+	      <li> <a class="active" href="index.html">Home</a> </li>
+	      <li> <a href="AboutMe.html">About Me</a> <li>
+	      <li> <a href="PI.html">Professional</a> </li>
+	      <li> <a href="Portfolio.html">Portfolio</a></li>	      
+	      <li> <a href="Service.html">Service</a> </li>
+	    </ul>
+	  </nav> 
+	  
+	</header>
+	<div class="cover"></div>
+	<div class="PageIntro">
+	  <h1 id="Title">About Me</h1>
+	  <h2 id="Subtitle"> </h2>
+	</div>
+	
+	<main>
+	 <div class="mainText">
+	   <p id ="p2" >
+	   I'm a Junior Computer Engineering student at Texas A&M, I'm Originaly from Mexico City Mexico and I came to the as an interational 
+	   Student about three years ago. My interest in computers started back when I played Age of Empires II on a 2000s IBM PC.<br>
+	   
+	   Outside my thecnical Interest, I enjoy playing the piano, playing videogames, and from time to time photography. I also developed and 
+	   Interest in Museums and Art, In the past 2 years I've been to around 30 or so expositions. My favorite anual expo is the
+	   <a href="https://www.worldpressphoto.org/" target="_blank" >World Press Photo</a>.
+	   <br>
+		Here are some of my Photos 
+	   </p>
+	  
+	 </div>
+  <div class="gallery">
+    <div class="img-w"><img src="Images/Nala.jpg" alt="" /></div>	
+    <div class="img-w"><img src="Images/A&M.jpg" alt="" /></div>
+    <div class="img-w"><img src="Images/Back.jpg" alt="" /></div>
+    <div class="img-w"><img src="Images/Austin_Park.jpg" alt="" /></div>
+    <div class="img-w"><img src="Images/Prague.jpg" alt="" /></div>
+    <div class="img-w"><img src="Images/Hacienda.jpg" alt="" /></div>
+    <div class="img-w"><img src="Images/Sunset.jpg" alt="" /></div>
+    <div class="img-w"><img src="Images/Truck.jpg" alt="" /></div>
+	<div class="img-w"><img src="Images/Sask.jpg" alt="" /></div>	
+  </div>
+ 
+	</main>
+	
+	<footer>
+	  <div  class="wraper">
+	  </div>
+	</footer>
+	
+  </body>
+</html>

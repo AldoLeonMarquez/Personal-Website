@@ -1,0 +1,487 @@
+body{ 
+  font-family: Arial, Helvetica, sans-serif; 
+  height: 100%;
+  margin: 0;
+  background-color:aliceblue;
+}
+html{ 
+  font-family: Arial, Helvetica, sans-serif; 
+  height: 100%;
+  margin: 0; 
+  overflow: scroll;
+  overflow-x: hidden;
+}
+/* No scrollbar from https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+* {
+  box-sizing: border-box;
+}
+/*Mini Preview from https://github.com/lonekorean/mini-preview */
+a {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  color: #537f7c;
+}
+
+.break {
+  text-align: center;
+}
+
+.mini-preview-wrapper {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  margin-top: -4px;
+  border: solid 1px #000;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, .3);
+  transition: z-index steps(1) .3s, opacity .3s, margin-top .3s;
+}
+
+a:hover .mini-preview-wrapper {
+  z-index: 2;
+  opacity: 1;
+  margin-top: 6px;
+  transition: opacity .3s, margin-top .3s;
+}
+
+.mini-preview-loading, .mini-preview-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;  
+}
+
+.mini-preview-loading {
+  display: table;
+  height: 100%;
+  width: 100%;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #f5ead4;
+  background-color: #59513f;
+}
+
+.mini-preview-loading::before {
+  content: 'Loading...';
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mini-preview-cover {
+  background-color: rgba(0, 0, 0, 0); /* IE fix */
+}
+
+.mini-preview-frame {
+  border: none;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+header::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+header nav {
+	float: left;
+	padding-left:15px;
+	background-color: #36648B;
+	width:100%;
+}
+header nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav li{
+  display: inline-block;
+  margin-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+ 
+header nav a{
+	color: #222;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 35px;
+}
+
+header nav a:hover {
+	color: #fffff;
+}
+/*The next two block are the navigation bar animation,
+from this youtube video: https://www.youtube.com/watch?v=FEmysQARWFU
+*/
+ header nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 100%;
+	background-color: #222; 
+	top:0;
+	width: 0%;
+	position: relative;
+	transition: all ease-in-out 300ms;
+}
+
+header nav a:hover::before{
+	width: 100%;
+}
+
+header {
+   background: #36648B;
+}
+main{ 
+ min-height:500px
+}
+
+.cover{
+  background-image:url("../Images/BackGround.jpg");
+  height: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.PageIntro {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+#Title{
+  font-size:60px
+	
+}
+
+#Subtitle{
+	font-size: 30px
+	
+}
+
+.Portrait{
+  height:350px;
+  width	:350px;
+  top:50px;
+  left:50px;
+  position: relative;
+  border-radius: 50%;
+	
+}
+
+.first{
+	
+	width:100%;
+	
+	
+}
+
+.vertical-line{
+        display: inline-block;
+        border-left: 1px solid #222;
+        margin: 0 10px;
+        height: 400px;
+        left:100px;
+        top:50px;
+        position: relative;
+}
+
+.intro{
+  //background-color: rgb(0,0,0); /* Fallback color */
+ // background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color:#222;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: relative;
+  top:20%;
+  left:10%;
+  font-size:25px;
+  z-index: 2;
+  width: 100%;
+  padding-left: 30px;
+  text-align: center;
+	body{ 
+  font-family: Arial, Helvetica, sans-serif; 
+  height: 100%;
+  margin: 0;
+  background-color:aliceblue;
+	}
+}
+html{ 
+  font-family: Arial, Helvetica, sans-serif; 
+  height: 100%;
+  margin: 0; 
+  overflow: scroll;
+  overflow-x: hidden;
+}
+/* No scrollbar from https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+* {
+  box-sizing: border-box;
+}
+/*Mini Preview from https://github.com/lonekorean/mini-preview */
+a {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  color: #537f7c;
+}
+
+.break {
+  text-align: center;
+}
+
+.mini-preview-wrapper {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  margin-top: -4px;
+  border: solid 1px #000;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, .3);
+  transition: z-index steps(1) .3s, opacity .3s, margin-top .3s;
+}
+
+a:hover .mini-preview-wrapper {
+  z-index: 2;
+  opacity: 1;
+  margin-top: 6px;
+  transition: opacity .3s, margin-top .3s;
+}
+
+.mini-preview-loading, .mini-preview-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;  
+}
+
+.mini-preview-loading {
+  display: table;
+  height: 100%;
+  width: 100%;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #f5ead4;
+  background-color: #59513f;
+}
+
+.mini-preview-loading::before {
+  content: 'Loading...';
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mini-preview-cover {
+  background-color: rgba(0, 0, 0, 0); /* IE fix */
+}
+
+.mini-preview-frame {
+  border: none;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+header::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+header nav {
+	float: left;
+	padding-left:15px;
+	background-color: #36648B;
+	width:100%;
+}
+header nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav li{
+  display: inline-block;
+  margin-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+ 
+header nav a{
+	color: #222;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 35px;
+}
+
+header nav a:hover {
+	color: #fffff;
+}
+/*The next two block are the navigation bar animation,
+from this youtube video: https://www.youtube.com/watch?v=FEmysQARWFU
+*/
+ header nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 100%;
+	background-color: #222; 
+	top:0;
+	width: 0%;
+	position: relative;
+	transition: all ease-in-out 300ms;
+}
+
+header nav a:hover::before{
+	width: 100%;
+}
+
+header {
+   background: #36648B;
+}
+main{ 
+ min-height:500px
+}
+
+.cover{
+  background-image:url("../Images/BackGround.jpg");
+  height: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.PageIntro {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: aliceblue;
+  font-weight: bold;
+  border: 3px solid aliceblue;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+#Title{
+  font-size:60px
+	
+}
+
+#Subtitle{
+	font-size: 30px
+	
+}
+
+.Portrait{
+  height:350px;
+  width	:350px;
+  top:50px;
+  left:50px;
+  position: relative;
+  border-radius: 50%;
+	
+}
+
+
+
+.first{
+	
+	width:100%;
+	
+	
+}
+
+.vertical-line{
+        display: inline-block;
+        border-left: 1px solid #222;
+        margin: 0 10px;
+        height: 400px;
+        left:100px;
+        top:50px;
+        position: relative;
+}
+
+
+.mainTitle{
+	font-size:40px;
+	color: #444;
+}
+
+.mainText{
+	font-size:35px;
+	color: #444;
+	
+}
+
+/* Footer navigation style */
+
+footer{
+	width:100%;
+	background-color: #36648B;
+	padding: 30px 0px;
+	position: relative;
+	
+}
+
+
+
+}
+
+.mainTitle{
+	font-size:40px;
+	color: #444;
+}
+
+.mainText{
+	font-size:35px;
+	color: #444;
+	
+}
+
+/* Footer navigation style */
+
+
